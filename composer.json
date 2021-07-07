@@ -1,0 +1,23 @@
+{
+    "name": "cuongnd88/lara-guardian",
+    "description": "Laravel Guardian makes it easy to perform authorization",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Ngo Dinh Cuong",
+            "email": "dinhcuongngo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cuongnd88\\LaraGuardian\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cuongnd88\\LaraGuardian\\LaraGuardianServiceProvider"
+            ]
+        }
+    }
+}
