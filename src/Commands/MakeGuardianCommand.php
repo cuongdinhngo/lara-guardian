@@ -3,8 +3,9 @@
 namespace Cuongnd88\LaraGuardian\Commands;
 
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Console\Command;
 
-class MakeGuardianCommand
+class MakeGuardianCommand extends Command
 {
     /**
      * The name and signature of the console command.
