@@ -1,7 +1,7 @@
 {
     "name": "cuongnd88/lara-guardian",
     "description": "Laravel Guardian makes it easy to perform authorization",
-    "license": "MIT License",
+    "license": "MIT",
     "authors": [
         {
             "name": "Ngo Dinh Cuong",

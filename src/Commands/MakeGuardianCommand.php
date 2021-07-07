@@ -2,11 +2,9 @@
 
 namespace Cuongnd88\LaraGuardian\Commands;
 
-use Illuminate\Console\GeneratorCommand;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Artisan;
 
-class MakeGuardianCommand extends GeneratorCommand
+class MakeGuardianCommand
 {
     /**
      * The name and signature of the console command.
