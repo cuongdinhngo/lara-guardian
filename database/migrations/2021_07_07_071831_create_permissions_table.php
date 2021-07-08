@@ -15,10 +15,13 @@ class CreatePermissionsTable extends Migration
     {
         Schema::create('permissions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('group_id')->unsigned();
+            $table->bigInteger('page_id')->unsigned();
             $table->foreign('group_id')->references('id')->on('groups');
             $table->foreign('page_id')->references('id')->on('pages');
             $table->json('actions');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

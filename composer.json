@@ -1,6 +1,16 @@
 {
     "name": "cuongnd88/lara-guardian",
     "description": "Laravel Guardian makes it easy to perform authorization",
+    "keywords": [
+        "laravel",
+        "permission",
+        "permissions",
+        "roles",
+        "acl",
+        "guardian",
+        "security"
+    ],
+    "homepage": "https://github.com/cuongnd88/lara-guardian",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +21,10 @@
     "autoload": {
         "psr-4": {
             "Cuongnd88\\LaraGuardian\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {

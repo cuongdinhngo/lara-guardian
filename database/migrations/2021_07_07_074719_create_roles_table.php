@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActionsTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateActionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('actions', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('alias')->unique();
+            $table->morphs('roleable');
+            $table->bigInteger('group_id')->unsigned();
+            $table->foreign('group_id')->references('id')->on('groups');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +30,6 @@ class CreateActionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actions');
+        Schema::dropIfExists('roles');
     }
 }
