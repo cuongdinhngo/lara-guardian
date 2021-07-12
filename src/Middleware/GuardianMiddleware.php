@@ -15,7 +15,8 @@ class GuardianMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (auth()->user()->rightAccess()) {
+        $user = auth()->user();
+        if ($user && $user->rightAccess()) {
             return $next($request);
         }
         throw new \Exception('No Permission');

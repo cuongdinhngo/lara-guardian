@@ -11,13 +11,23 @@ class Permission extends Model
 
     protected $table = "permissions";
 
+    /**
+     * Get group
+     *
+     * @return void
+     */
     public function group()
     {
-        return $this->belongsTo('App\Models\Group');
+        return $this->belongsTo(guardian('guardian.models.groups'));
     }
 
+    /**
+     * Get page
+     *
+     * @return void
+     */
     public function page()
     {
-        return $this->belongsTo('App\Models\Page');
+        return $this->belongsTo(guardian('guardian.models.pages'));
     }
 }

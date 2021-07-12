@@ -2,7 +2,6 @@
 
 namespace Cuongnd88\LaraGuardian;
 
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class LaraGuardianServiceProvider extends ServiceProvider
@@ -25,7 +24,8 @@ class LaraGuardianServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->commands([
-            \Cuongnd88\LaraGuardian\Commands\MakeGuardianCommand::class,
+            Commands\MakeGuardianCommand::class,
+            Commands\GuardianCommand::class,
         ]);
     }
 }

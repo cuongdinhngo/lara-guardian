@@ -1,6 +1,6 @@
 {
     "name": "cuongnd88/lara-guardian",
-    "description": "Laravel Guardian makes it easy to perform authorization",
+    "description": "Laravel Guardian makes it easy to perform permission",
     "keywords": [
         "laravel",
         "permission",

@@ -33,6 +33,6 @@ class Role extends Model
      */
     public function permissions()
     {
-        return $this->hasMany('App\Models\Permission', 'group_id');
+        return $this->hasMany(guardian('guardian.models.permissions'), 'group_id');
     }
 }

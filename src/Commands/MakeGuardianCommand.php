@@ -39,6 +39,18 @@ class MakeGuardianCommand extends Command
         'Role.php',
     ];
 
+    protected $config = [
+        'guardian.php',
+        'actions.php',
+        'groups.php',
+        'pages.php',
+    ];
+
+    protected $traits = [
+        'HasGuardian.php',
+        'QueryKit.php'
+    ];
+
     /**
      * Execute the console command.
      *
@@ -51,6 +63,7 @@ class MakeGuardianCommand extends Command
             $this->exportModels();
             $this->exportMiddleware();
             $this->exportTraits();
+            $this->exportConfig();
 
             Artisan::call('migrate', [
                 '--path' => $this->migrations
@@ -63,16 +76,42 @@ class MakeGuardianCommand extends Command
         }
     }
 
+    /**
+     * Export Config files
+     *
+     * @return void
+     */
+    public function exportConfig()
+    {
+        $path = config_path('guardian');
+        if (File::missing($path)) {
+            File::makeDirectory($path);
+        }
+        foreach($this->config as $value){
+            copy(
+                __DIR__."/../../config/guardian/{$value}",
+                $path."/{$value}"
+            );
+        }
+    }
+
+    /**
+     * Export Traits
+     *
+     * @return void
+     */
     public function exportTraits()
     {
         $path = app_path('Guardian/Traits');
         if (File::missing($path)) {
             File::makeDirectory($path, 0755, true);
         }
-        copy(
-            __DIR__."/../Guardian/Traits/HasGuardian.php",
-            $path."/HasGuardian.php"
-        );
+        foreach($this->traits as $trait) {
+            copy(
+                __DIR__."/../Guardian/Traits/{$trait}",
+                $path."/{$trait}"
+            );
+        }
     }
 
     /**
