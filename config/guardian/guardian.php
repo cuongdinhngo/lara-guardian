@@ -17,9 +17,10 @@ return [
     ],
     /*
      * UPSERT methods
-     * 
+     *
      * actions.insert: the column(s) that uniquely identify records within the associated table
      * actions.update: the columns that should be updated if a matching record already exists in the database
+     *
      */
     'upsert' => [
         'actions' => [
