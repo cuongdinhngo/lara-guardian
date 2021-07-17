@@ -47,8 +47,7 @@ class MakeGuardianCommand extends Command
     ];
 
     protected $traits = [
-        'HasGuardian.php',
-        'QueryKit.php'
+        'HasGuardian.php'
     ];
 
     /**
