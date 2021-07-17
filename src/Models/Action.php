@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Guardian\Traits\QueryKit;
+use App\Traits\QueryKit;
 
 class Action extends Model
 {

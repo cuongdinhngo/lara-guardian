@@ -18,6 +18,10 @@
             "email": "dinhcuongngo@gmail.com"
         }
     ],
+    "require": {
+        "php": "^7.2.5|^8.0",
+        "cuongnd88/lara-query-kit": "^1.2"
+    },
     "autoload": {
         "psr-4": {
             "Cuongnd88\\LaraGuardian\\": "src/"
