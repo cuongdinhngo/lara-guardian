@@ -69,7 +69,7 @@ You have to assign the `guard` middleware in your `app/Http/Kernel.php` file.
 
 There is the relationship of Guardian's models
 
-![Guardian models](ERD-Laravel-Guardian.png.png)
+![Guardian models](ERD-Laravel-Guardian.png)
 
 `MEMO`: the `alias` of `actions, pages` tables is used to name a route, therefore you need to enter `lower-case` letters, `dash` symbol instead of space.
 
